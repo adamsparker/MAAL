@@ -1,0 +1,163 @@
+@font-face { font-family: Kepler; src: url('assets/fonts/Kepler\ 296.otf'); } 
+@font-face { font-family: Bahnschrift; src: url('assets/fonts/Bahnschrift.ttf'); } 
+
+*,
+*::before
+*::after {
+    box-sizing: border-box; /* Regular */
+    -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+    -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+
+
+    /*   image-rendering: -moz-crisp-edges;          /* Firefox */
+    /*   image-rendering: -o-crisp-edges;            /* Opera */
+    /*   image-rendering: -webkit-optimize-contrast; /* Webkit (non-standard naming)*/
+    /*   -ms-interpolation-mode: nearest-neighbor;   /* IE (non-standard property) */  
+}
+
+
+h1, h2, h3, h4, h5, h6 {
+    margin:0;
+    padding:0;
+    font-size: clamp(1rem, 10vw + 1rem, 4.8rem);
+}
+
+p {
+    margin:0;
+    padding:0;
+    font-size: clamp(1rem, 2.5vw, 1.3rem);
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+body {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    font-family: 'Bahnschrift', sans-serif;
+    background-color: #000000;
+    color: #ffffff;
+    -webkit-font-smoothing: antialiased;
+    -ms-overflow-style: none;
+    overflow-x: hidden;
+}
+
+/*     General     */
+
+.container {
+    width: min(100%, 1000px);
+    margin: 0 auto;
+}
+
+.button {
+    position: relative;
+    text-decoration: none;
+    color: white;
+    font-weight: 800;
+    font-size: 16px;
+    letter-spacing: 0.05rem;
+    text-align: center;
+}
+
+.button:hover {
+    background-color: white;
+    color: black;
+    padding: 0 10em;
+}
+
+.button::after {
+    display: block;
+    content: "We'll help";
+    font-weight: 100;
+    font-size: 10px;
+}
+
+
+.modal-holder {
+    display: none;
+}
+
+/*      Entry      */
+
+.entry {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    max-width: 100%;
+}
+
+.entry__inner {
+    background-size: min(90em);
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    max-width: 100%;
+    padding: 10em 0;
+}
+
+
+
+.entry__logo {
+    position: relative;
+    background: url(assets/images/logo.png) center no-repeat;
+    image-rendering: -webkit-optimize-contrast;
+    font-family: 'Kepler', sans-serif;
+    width: 10em;
+    height: 10em;
+    background-size: min(10em);
+    z-index: 100;
+}
+
+.entry__bg-img {
+    opacity: 70%;
+    position: absolute;
+    top: -10%;
+    left: 0;
+    max-width: 40em;
+    transition: .2s all;
+
+}
+
+.entry__logo:hover ~ .entry__bg-img {
+    filter: blur(40px);
+    transition: .2s all;
+}
+
+.entry__logo::after {
+    display: block;
+    content: "Murdock’s attorney at law";
+    max-width: 50%;
+    bottom: 0;
+    font-size: 1.4em;
+    line-height: 1em;
+    color: white;
+    position: absolute;
+}
+
+.entry__logo:hover::after {
+    content: "You're not alone";
+}
+
+.entry__button {
+    transform: translate(0%, 3em);
+}
+
+.entry__title {
+    text-align: center;
+    font-size: clamp(1rem, 0.3vw + 1rem, 2rem);
+    line-height: 1.2em;
+    font-family: 'Bahnschrift', sans-serif;
+    font-weight: 100;
+    margin: 0 2em;
+}
+
+.entry__icon {
+    filter: brightness(0) invert(1);
+    max-width: 2em;
+    transform: translate(0%, 3em);
+
+}
