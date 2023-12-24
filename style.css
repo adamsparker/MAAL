@@ -69,7 +69,7 @@ body {
 
 .button::after {
     display: block;
-    content: "We'll help";
+    content: "Мы поможем.";
     font-weight: 100;
     font-size: 10px;
 }
@@ -119,6 +119,7 @@ body {
     left: 0;
     max-width: 40em;
     transition: .2s all;
+    pointer-events: none;
 
 }
 
@@ -129,8 +130,8 @@ body {
 
 .entry__logo::after {
     display: block;
-    content: "Murdock’s attorney at law";
-    max-width: 50%;
+    content: "Архивы закона и права";
+    max-width: 60%;
     bottom: 0;
     font-size: 1.4em;
     line-height: 1em;
@@ -139,7 +140,7 @@ body {
 }
 
 .entry__logo:hover::after {
-    content: "You're not alone";
+    content: "Доверь работу профессионалам";
 }
 
 .entry__button {
@@ -161,3 +162,5 @@ body {
     transform: translate(0%, 3em);
 
 }
+
+
